@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOM! 加碼策略特攻 | 歐大選擇權教室</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --c-bg: #FAF9F6;
+            --c-primary: #EF4444; /* 英雄紅 */
+            --c-secondary: #3B82F6; /* 正義藍 */
+            --c-accent: #FDE047; /* 閃電黃 */
+            --c-dark: #0F172A;
+            --c-halftone: #CBD5E1;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--c-bg);
+            color: var(--c-dark);
+            background-image: radial-gradient(var(--c-halftone) 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+
+        .font-comic {
+            font-family: 'Bangers', 'Noto Sans TC', cursive;
+            letter-spacing: 0.05em;
+        }
+
+        .pop-card {
+            border: 5px solid var(--c-dark);
+            border-radius: 1.5rem;
+            background-color: white;
+            box-shadow: 10px 10px 0px var(--c-dark);
+            transition: all 0.2s ease;
+        }
+
+        .pop-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 13px 13px 0px var(--c-dark);
+        }
+
+        .capsule-header {
+            background: white;
+            border: 4px solid var(--c-dark);
+            border-radius: 9999px;
+            box-shadow: 0 10px 0 var(--c-dark);
+        }
+
+        @keyframes text-flash {
+            0%, 100% { color: var(--c-dark); opacity: 1; }
+            50% { color: var(--c-primary); opacity: 0.8; }
+        }
+        .animate-danger {
+            animation: text-flash 0.8s infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8 flex flex-col items-center">
+
+    <!-- Header -->
+    <header class="w-full max-w-4xl capsule-header py-4 px-8 mb-12 flex flex-row items-center justify-center gap-4 bg-white">
+        <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl border-4 border-[var(--c-dark)] overflow-hidden bg-white shrink-0">
+            <img src="IP標籤.jpg" alt="Logo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/3B82F6/FFFFFF?text=J&font=Bangers'">
+        </div>
+        <div class="flex flex-col">
+            <h1 class="text-xl md:text-3xl font-black text-[var(--c-dark)]">歐大選擇權教室</h1>
+            <p class="text-[10px] font-black text-[var(--c-secondary)] tracking-widest uppercase italic font-comic">
+                Strategy Automation Masterclass
+            </p>
+        </div>
+    </header>
+
+    <main class="w-full max-w-5xl space-y-12">
+        
+        <!-- 大標題 -->
+        <div class="text-center">
+            <div class="inline-block bg-[var(--c-accent)] px-8 py-6 pop-card transform -rotate-1 relative">
+                <div class="absolute -top-8 -left-8 text-6xl transform -rotate-12">⚡</div>
+                <h2 class="text-4xl md:text-6xl font-black text-[var(--c-dark)] tracking-wide font-comic uppercase">
+                    AUTO-SCALE STRATEGY
+                </h2>
+                <div class="mt-3 text-xl md:text-2xl font-black text-white bg-[var(--c-primary)] px-6 py-2 inline-block rounded-xl border-4 border-black shadow-[4px_4px_0_#000]">
+                    自動化加碼設定指南
+                </div>
+            </div>
+        </div>
+
+        <!-- 介面展示區 -->
+        <section class="w-full">
+            <div class="pop-card bg-white p-4 md:p-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="bg-[var(--c-dark)] text-white px-4 py-1 rounded-lg font-comic text-xl">01</span>
+                    <h3 class="text-2xl font-black">介面設定參考圖</h3>
+                </div>
+                <div class="border-4 border-dashed border-gray-200 rounded-2xl p-2 bg-gray-50 overflow-hidden">
+                    <img src="加碼策略2.JPG" alt="加碼策略截圖" class="w-full h-auto rounded-xl" onerror="this.src='https://placehold.co/800x400?text=加碼策略2.JPG+Missing'">
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心邏輯區：分鏡風格 -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="pop-card p-6 bg-white border-t-[15px] border-t-[var(--c-secondary)]">
+                <h4 class="text-xl font-black mb-3 font-comic text-[var(--c-secondary)]">PHASE A: MONITOR</h4>
+                <p class="font-bold text-gray-700 leading-relaxed">
+                    <strong>時間價值監測</strong><br>
+                    系統每 60 秒取樣，當 5 筆平均上漲幅度 <span class="text-[var(--c-primary)] underline">C值 > 8%</span> 時，特攻啟動！
+                </p>
+            </div>
+            <div class="pop-card p-6 bg-white border-t-[15px] border-t-[var(--c-accent)]">
+                <h4 class="text-xl font-black mb-3 font-comic text-[var(--c-dark)]">PHASE B: EXECUTE</h4>
+                <p class="font-bold text-gray-700 leading-relaxed">
+                    <strong>180 秒冷卻執行</strong><br>
+                    採取分時加碼，每隔 <span class="bg-[var(--c-accent)] px-1">180 秒</span> 下單一次，確保在 90~110 點區間穩健推進。
+                </p>
+            </div>
+            <div class="pop-card p-6 bg-[var(--c-dark)] text-white">
+                <h4 class="text-xl font-black mb-3 font-comic text-[var(--c-primary)]">PHASE C: SAFETY</h4>
+                <p class="font-bold text-gray-300 leading-relaxed">
+                    <strong>風控自動熔斷</strong><br>
+                    保證金水位是生命線！若低於 <span class="text-[var(--c-accent)] font-black text-xl">30%</span>，系統立即強制停止所有下單。
+                </p>
+            </div>
+        </section>
+
+        <!-- 參數數據：重擊視覺 -->
+        <section class="w-full py-8 text-center">
+            <div class="inline-block bg-white p-8 pop-card border-dashed">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="space-y-1">
+                        <div class="text-gray-400 font-black text-xs uppercase">下單間距時間</div>
+                        <div class="text-5xl font-black text-[var(--c-primary)] font-comic">180s</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-gray-400 font-black text-xs uppercase">權利金區間</div>
+                        <div class="text-5xl font-black text-[var(--c-secondary)] font-comic">90-110</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-gray-400 font-black text-xs uppercase">下單價格</div>
+                        <div class="text-3xl font-black text-[var(--c-dark)]">加重一檔</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 公式計算：閃電快報 -->
+        <section class="pop-card bg-[var(--c-secondary)] p-8 text-white relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-9xl opacity-20 transform -rotate-12">🧮</div>
+            <h3 class="text-2xl font-black mb-6 font-comic tracking-widest">CRITICAL FORMULA</h3>
+            <div class="bg-white/10 p-6 rounded-2xl border-2 border-white/20 backdrop-blur-sm">
+                <div class="text-center space-y-4">
+                    <p class="text-blue-100 font-bold">上漲幅度 C值 計算方式</p>
+                    <div class="text-3xl md:text-5xl font-black font-comic tracking-tighter">
+                        ( B - A ) / B = C%
+                    </div>
+                    <div class="text-sm font-bold text-blue-200">
+                        A: 開盤時間價值 | B: 即時平均值
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事項：警告風格 -->
+        <section class="w-full">
+            <div class="pop-card bg-[var(--c-accent)] p-8 border-dashed">
+                <h3 class="text-2xl font-black mb-4 flex items-center gap-2">
+                    <span class="animate-danger">⚠️</span> 重要警告！WARNING!
+                </h3>
+                <div class="bg-white/50 p-6 rounded-xl border-4 border-[var(--c-dark)]">
+                    <ul class="space-y-3 font-bold text-lg">
+                        <li class="flex items-start gap-2">
+                            <span class="text-[var(--c-primary)]">●</span>
+                            <span>未達 8% 門檻前，加碼策略將處於「待命狀態」，不會執行。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[var(--c-primary)]">●</span>
+                            <span>30% 保證金水位為「硬指標」，切勿手動解除限制以免斷頭。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-[var(--c-primary)]">●</span>
+                            <span>每次下單口數建議設定為 1 口，維持動態平衡。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl capsule-header py-8 px-8 mt-20 mb-10 flex flex-col items-center justify-center bg-white">
+        <div class="flex items-center gap-4 mb-3">
+            <span class="text-2xl font-black font-comic italic text-[var(--c-dark)]">JOPTION</span>
+            <span class="text-gray-300">|</span>
+            <span class="font-black text-lg">歐大選擇權教室</span>
+        </div>
+        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">
+            © 2026 Strategy Automation Guide - Version Comic 2.0
+        </p>
+    </footer>
+
+</body>
+</html>
